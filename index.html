@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- link balaii hamon file css hast -->
+</head>
+<body>
+
+
+
+  <!-- Side Navigationj -->
+<!-- <nav class="w3-sidebar w3-bar-block w3-collapse bg-white progress-bar-animated card" style="z-index:3;width:320px;" id="mySidebar"> -->
+  <!-- <ul class="nav flex-column">
+
+    <li class="nav-item">
+      <a href="javascript:void(0)" class=" nav-link btn w3-border-bottom w3-large"><img src="https://www.w3schools.com/images/w3schools.png" style="width:60%;"></a> 
+    </li>
+
+    <li class="nav-item">
+      <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" class=" nav-link btn w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a> 
+    </li>
+
+    <li class="nav-item">
+      <a href="javascript:void(0)" class="nav-link btn w3-dark-grey btn w3-hover-black w3-left-align" data-toggle="modal" data-target="#myModal" onclick="document.getElementById('id01').style.display='block'">New Message <i class="w3-padding fa fa-pencil"></i></a>
+    </li>
+    
+    <li class="nav-item">
+      <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="nav-link btn"><i class="fa fa-inbox w3-margin-right"></i>Inbox (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
+    </li> -->
+    
+  
+    <!-- Side Navigation -->
+    <div class="container-fluid">
+      <div class="row flex-nowrap" style="z-index:3;width:320px;">
+        <div class="col-auto px-0">
+          <div id="sidebar" class="collapse collapse-horizontal show border-end">
+            <div id="sidebar-nav" class="list-group border-0 rounded-0 text-sm-start min-vh-100">
+              <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate" data-bs-parent="#sidebar"><img src="https://www.w3schools.com/images/w3schools.png" style="width:60%;"> </a>
+              <a href="#" onclick="w3_close()" title="Close Sidemenu" class="list-group-item border-end-0 d-inline-block text-truncate" data-bs-parent="#sidebar">close<i class="fa fa-remove"></i></a>
+              <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate" data-bs-parent="#sidebar" data-toggle="modal" data-target="#myModal" onclick="document.getElementById('id01').style.display='block'">New Message <i class="w3-padding fa fa-pencil"></i></a>
+              <!-- <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="fa fa-inbox w3-margin-right"></i>Inbox (3)<i class="fa fa-caret-down w3-margin-left"></i></a> -->
+              <li>
+                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle list-group-item border-end-0 d-inline-block text-truncate"data-bs-parent="#sidebar" id="myBtn" onclick="myFunc('Demo1')"><i class="fa fa-inbox w3-margin-right"></i>Inbox (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
+                <!-- <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                  <li class="w-100">
+                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1 </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2 </a>
+                  </li>
+                </ul> -->
+              </li>
+              <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="fa fa-paper-plane w3-margin-right"></i>Sent</a>
+              <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="fa fa-hourglass-end w3-margin-right"></i>Drafts</a>
+              <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-auto ps-md-2 pt-2 w3-hide w3-animate-left" id="Demo1">
+          <a href="javascript:void(0)" class="w3-bar-item btn w3-border-bottom test w3-hover-light-grey" onclick="openMail('Borge');w3_close();" id="firstTab">
+            <div class="container">
+              <img class="rounded w3-margin-right" src="/w3images/avatar3.png" style="width:15%;"><span class="w3-opacity w3-large">Borge Refsnes</span>
+              <h6>Subject: Remember Me</h6>
+              <p>Hello, I just wanted to let you know that I'll be home at...</p>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="w3-bar-item btn w3-border-bottom test w3-hover-light-grey" onclick="openMail('Jane');w3_close();">
+            <div class="container">
+              <img class="rounded w3-margin-right" src="/w3images/avatar5.png" style="width:15%;"><span class="w3-opacity w3-large">Jane Doe</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="w3-bar-item btn w3-border-bottom test w3-hover-light-grey" onclick="openMail('John');w3_close();">
+            <div class="container">
+              <img class="rounded w3-margin-right" src="/w3images/avatar2.png" style="width:15%;"><span class="w3-opacity w3-large">John Doe</span>
+              <p>Welcome!</p>
+            </div>
+          </a>
+        </div>
+    
+      </div>
+ 
+  <!-- Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          Modal body..
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="myModal" role="dialog" style="z-index:4">
+    <div class="modal-dialog bg-white">
+    
+      <!-- Modal content-->
+      
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">send mail</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="document.getElementById('id01').style.display='none'">
+            <i class="fa fa-remove"></i>
+          </button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <label class="form-label">To</label>
+          <input type="text" class="form-control">
+          <label class="form-label">To</label>
+          <input type="text" class="form-control">
+          label class="form-label">From</label>
+          <input type="text" class="form-control">
+          <label class="form-label">Subject</label>
+            <input type="text" class="form-control">
+            <textarea class="form-control" rows="5" id="comment" name="text" style="height:150px" placeholder="What's on your mind?"></textarea>
+
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="document.getElementById('id01').style.display='none'">
+            <i class="fa fa-remove"></i>Close</button>
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal" onclick="document.getElementById('id01').style.display='none'">
+            Send<i class="fa fa-paper-plane"></i></button>  
+
+        </div>
+      </div>       
+    </div>            
+</div>
+
+
+  <!-- Overlay effect when opening the side navigation on small screens -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="Close Sidemenu" id="myOverlay"></div>
+<!-- Page content -->
+<div class="w3-main col-12" style="margin-left:320px;">
+  <i class="fa fa-bars btn bg-white w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
+  <a href="javascript:void(0)" class="w3-hide-large w3-red btn w3-right w3-margin-top w3-margin-right" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-pencil"></i></a>
+  
+  <div id="demo" class="w3-container person">
+    <br>
+    <h4><i class="fa fa-clock-o"></i> From Borge Refsnes, Sep 27, 2015.</h4>
+    <a class="btn w3-light-grey" href="#">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
+    <a class="btn w3-light-grey" href="#">Forward<i class="w3-margin-left fa fa-arrow-right"></i></a>
+    <hr>
+    
+  </div>    
+  </div>  
+</div>
+<script>
+  var openInbox = document.getElementById("myBtn");
+  openInbox.click();
+  
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+  }
+  
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+  }
+  
+  function myFunc(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show"; 
+      x.previousElementSibling.className += " w3-red";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+      x.previousElementSibling.className = 
+      x.previousElementSibling.className.replace(" w3-red", "");
+    }
+  }
+  
+  openMail("Borge")
+  function openMail(personName) {
+    var i;
+    var x = document.getElementsByClassName("person");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x = document.getElementsByClassName("test");
+    for (i = 0; i < x.length; i++) {
+      x[i].className = x[i].className.replace(" w3-light-grey", "");
+    }
+    document.getElementById(personName).style.display = "block";
+    event.currentTarget.className += " w3-light-grey";
+  }
+  var openTab = document.getElementById("firstTab");
+  openTab.click();
+      
+    const personName = [{
+      title: "Borge",
+      img:"/w3images/avatar2.png",
+      tooltip: "Hello, i just wanted to let you know that i'll be home at lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      Subject: "remember me"},
+
+      {
+      title: " Jane",
+      img: "/w3images/avatar5.png",
+      tooltip: "lorem ipsum dolor sit amet, consectetur adip",
+      Subject: "none"
+      },
+      
+      {
+      title: "John",
+      img: "/w3images/avatar2.png",
+      tooltip: "welcome! that it is",
+      Subject: "none",},
+      ];
+
+    function person (personitems) {
+    
+    let text = "";
+    for ( let i = 0; i < personitems.length; i++) {
+      text += "  " + "<a href='"+personitems[i].img+"'  tooltip='" + personitems[i].tooltip +  "'>"       
+         +personitems[i].title+ "</a>";
+    }
+  
+    return text;
+  }
+  document.getElementById("demo").innerHTML = person(personName);
+  </script>
+  
+</body>
+</html>
