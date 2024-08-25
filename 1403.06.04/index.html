@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- link balaii hamon file css hast -->
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+  <!-- Side Navigation -->
+  <div class="container-fluid">
+    <div class="sidenav">
+      <a href="javascript:void(0)" class="list-group-item border-end-0 d-inline-block text-truncate w3-hover-light-grey">
+        <img src="https://www.w3schools.com/images/w3schools.png" style="width:60%;">
+      </a>
+      
+      <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
+      class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
+
+      <a href="javascript:void(0)" class="list-group-item border-end-0 d-inline-block text-truncate w3-hover-light-grey" 
+      data-toggle="modal" data-target="#myModal" id="newmessage"
+      onclick="document.getElementById('id01').style.display='block'">New Message <i class="w3-padding fa fa-pencil"></i></a>
+
+      <button class="dropdown-btn bg-warning text-bg-dark">
+        <i class="fa fa-inbox w3-margin-right"></i>Inbox (3)<i class="fa fa-caret-down w3-margin-left"></i>
+      </button>
+      <div class="dropdown-container">
+        
+        <a href="javascript:void(0)">
+          <img class="rounded w3-margin-right" src="/w3images/avatar3.png" style="width:15%;"><span
+            class="w3-opacity w3-large">Borge Refsnes</span>
+          <h6>Subject: Remember Me</h6>
+          <p style="font-size: x-small;">Hello, I just wanted to let you know that I'll be home at...
+          </p>
+        </a>
+
+        <a href="javascript:void(0)">
+          <img class="rounded w3-margin-right" src="/w3images/avatar5.png" style="width:15%;">
+          <span class="w3-opacity w3-large">Jane Doe</span>
+          <p style="font-size: x-small;">Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+          </p>
+        </a>
+
+        <a href="javascript:void(0)">
+          <img class="rounded w3-margin-right" src="/w3images/avatar2.png" style="width:15%;">
+          <span class="w3-opacity w3-large">John Doe</span>
+          <p>Welcome!</p>
+        </a>
+
+      </div>
+      <a href="#"><i class="fa fa-paper-plane w3-margin-right"></i>Sent</a>
+      <a href="#"><i class="fa fa-hourglass-end w3-margin-right"></i>Drafts</a>
+      <a href="#"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
+    </div>
+    
+    <!-- page setup -->
+    <div class="col" style="margin-left:320px;">
+      <i class="fa fa-bars btn bg-white w3-hide-large w3-xlarge w3-margin-left mt-2" onclick="w3_open()"></i>
+      <a href="javascript:void(0)" class="w3-hide-large w3-red btn w3-right mt-2 w3-margin-right"
+        onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-pencil"></i></a>
+
+      <div id="Borge" class="container">
+        <br>
+        <img class="w3-round  w3-animate-top" src="image/image104.JPG" style="width:15%;">
+        <h5 class="w3-opacity">Subject: Interview</h5>
+        <h4><i class="fa fa-clock-o"></i> From JMA Wireless, Aug 15, 2024.</h4>
+        <a class="btn" href="#">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
+        <a class="btn" href="#">Forward<i
+            class="w3-margin-left fa fa-arrow-right"></i></a>
+        <hr>
+        <p>Hello Borge,<br>
+
+          Thank you for your interest in the JMA Project Manager position. We were clearly impressed with your
+          background and competence. We had a number of excellent candidates, including yourself, and it was a
+          difficult decision.
+
+          In the end, we decided to move forward with another candidate. We will keep you in mind for future openings
+          as they develop.</p>
+        <p>Best Regards, <br> The JMA Recruiting Team.
+      </div>
+
+      <div id="Jane" class="container">
+        <br>
+        <img class="w3-round w3-animate-top" src="/w3images/avatar5.png" style="width:20%;">
+        <h5 class="w3-opacity">Subject: None</h5>
+        <h4><i class="fa fa-clock-o"></i> From Jane Doe, Sep 25, 2015.</h4>
+        <a class="btn">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
+        <a class="btn">Forward<i class="w3-margin-left fa fa-arrow-right"></i></a>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo
+          consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut
+          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Forever yours,<br>Jane</p>
+      </div>
+
+      <div id="John" class="container">
+        <br>
+        <img class="w3-round w3-animate-top" src="/w3images/avatar2.png" style="width:20%;">
+        <h5 class="w3-opacity">Subject: None</h5>
+        <h4><i class="fa fa-clock-o"></i> From John Doe, Sep 23, 2015.</h4>
+        <a class="btn">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
+        <a class="btn">Forward<i class="w3-margin-left fa fa-arrow-right"></i></a>
+        <hr>
+        <p>Welcome.</p>
+        <p>That's it!</p>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <span onclick="document.getElementById('myModal').style.display='none'" class="btn btn-warning"
+              ata-bs-dismiss="modal">&times;</span>
+
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <label class="modal-title">To</label>
+            <input class="form-control" type="text">
+            <label>From</label>
+            <input class="form-control" type="text">
+            <label>Subject</label>
+            <input class="form-control" type="text">
+            <input class="form-control" style="height:150px" placeholder="What's on your mind?">
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <a class="btn btn-warning" onclick="document.getElementById('myModal').style.display='none'">Cancel<i
+                class="fa fa-remove"></i></a>
+            <a class="btn" onclick="document.getElementById('myModal').style.display='none'">Send<i
+                class="fa fa-paper-plane"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlay effect when opening the side navigation on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+      title="Close Sidemenu" id="myOverlay"></div>
+  </div>
+
+  <!-- script -->
+  <script>
+   
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+
+   
+    // data structure 
+    
+    // const personName = [{
+    //   title: "Borge",
+    //   img: "/w3images/avatar2.png",
+    //   tooltip: "Hello, i just wanted to let you know that i'll be home at lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    //   Subject: "remember me"
+    // },
+
+    // {
+    //   title: " Jane",
+    //   img: "/w3images/avatar5.png",
+    //   tooltip: "lorem ipsum dolor sit amet, consectetur adip",
+    //   Subject: "none"
+    // },
+
+    // {
+    //   title: "John",
+    //   img: "/w3images/avatar2.png",
+    //   tooltip: "welcome! that it is",
+    //   Subject: "none",
+    // },
+    // ];
+
+    // function person(personitems) {
+
+    //   let text = "";
+    //   for (let i = 0; i < personitems.length; i++) {
+    //     text += "  " + "<a href='" + personitems[i].img + "'  tooltip='" + personitems[i].tooltip + "'>"
+    //       + personitems[i].title + "</a>";
+    //   }
+
+    //   return text;
+    // }
+    // document.getElementById("demo").innerHTML = person(personName);
+ 
+
+    // sidemenu
+    
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+</body>
+
+</html>
